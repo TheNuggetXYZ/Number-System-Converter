@@ -22,9 +22,9 @@
         <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>
         <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBackgroundBaseLowBrush}"/>
-        <Setter Property="MinHeight" Value="38"/>
+        <Setter Property="MinHeight" Value="48"/>
         <Setter Property="CornerRadius" Value="6"/>
-        <Setter Property="Padding" Value="10,10"/>
+        <Setter Property="Padding" Value="10,12"/>
     </Style>
     
     <Style Selector="TextBox /template/ Border#PART_BorderElement">
@@ -94,7 +94,7 @@
             <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>
             <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBackgroundBaseLowBrush}"/>
-            <Setter Property="MinHeight" Value="38"/>
+            <Setter Property="MinHeight" Value="48"/>
             <Setter Property="CornerRadius" Value="6"/>
             <Setter Property="Padding" Value="10, 11"/>
         </Style>
