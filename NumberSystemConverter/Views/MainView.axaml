@@ -7,6 +7,18 @@
              x:Class="NumberSystemConverter.Views.MainView"
              x:DataType="vm:MainViewModel">
     
-    
+    <Grid RowDefinitions="Auto, Auto, *, Auto, Auto"
+          RowSpacing="8"
+          VerticalAlignment="Top"
+          Margin="32">
+        
+        <ComboBox Name="NumberSystemComboBox1" Grid.Row="0" HorizontalAlignment="Stretch"></ComboBox>
+        <TextBox Grid.Row="1"></TextBox>
+        
+        <Separator Grid.Row="2"></Separator>
+        
+        <ComboBox Name="NumberSystemComboBox2" Grid.Row="3" HorizontalAlignment="Stretch"></ComboBox>
+        <TextBox Grid.Row="4"></TextBox>
+    </Grid>
 
 </UserControl>
