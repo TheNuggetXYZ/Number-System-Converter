@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="NumberSystemConverter.Android/NumberSystemConverter.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="NumberSystemConverter.Browser/NumberSystemConverter.Browser.csproj" />
+  <Project Path="NumberSystemConverter.Desktop/NumberSystemConverter.Desktop.csproj" />
+  <Project Path="NumberSystemConverter.iOS/NumberSystemConverter.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="NumberSystemConverter/NumberSystemConverter.csproj" />
+</Solution>
