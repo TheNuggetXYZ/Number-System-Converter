@@ -23,8 +23,14 @@
         
             <TextBlock Text="Použitá metoda: Postupné Odečítání" HorizontalAlignment="Center" Margin="16" FontSize="12"></TextBlock>
         
-            <TextBlock Name="LokaceText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
-            <TextBlock Name="StepsText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+            <Expander Header="Postup konverze" HorizontalAlignment="Stretch">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                    <StackPanel Margin="16" Spacing="4">
+                        <TextBlock Name="LokaceText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+                        <TextBlock Name="StepsText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+            </Expander>
         </StackPanel>
     </ScrollViewer>
 
