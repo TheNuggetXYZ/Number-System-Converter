@@ -17,6 +17,43 @@
             </FluentTheme.Palettes>
         </FluentTheme>
         
+        <Style Selector="Expander">
+            <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBackgroundBaseLowBrush}"/>
+            <Setter Property="MinHeight" Value="48"/>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Padding" Value="10,12"/>
+        </Style>
+        
+        <Style Selector="Expander /template/ ToggleButton#ExpanderHeader">
+            <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
+    
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="BorderBrush" Duration="0:0:0.15"/>
+                    <BrushTransition Property="Background" Duration="0:0:0.15"/>
+                </Transitions>
+            </Setter>
+        </Style>
+        
+        <Style Selector="Expander /template/ ToggleButton#ExpanderHeader /template/ Border#ToggleButtonBackground">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        
+        <Style Selector="Expander /template/ ToggleButton#ExpanderHeader:pointerover /template/ Border#ToggleButtonBackground">
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBackgroundBaseMediumBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
+        </Style>
+        
+        <Style Selector="Expander /template/ ToggleButton#ExpanderHeader:focus /template/ Border#ToggleButtonBackground">
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlHighlightAccentBrush}"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="Background" Value="{DynamicResource InsetControlBackground}"/>
+            <Setter Property="Effect">
+                <DropShadowEffect BlurRadius="2" Color="{DynamicResource SystemAccentColor}" OffsetX="0" OffsetY="0" Opacity="1"/>
+            </Setter>
+        </Style>
         
     <Style Selector="TextBox">
         <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}"/>
