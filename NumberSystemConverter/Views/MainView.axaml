@@ -8,23 +8,24 @@
              x:DataType="vm:MainViewModel"
              FontSize="18">
     
-    <Grid RowDefinitions="Auto, Auto, *, Auto, Auto, Auto, Auto, Auto"
-          RowSpacing="8"
-          VerticalAlignment="Top"
-          Margin="32">
+    <ScrollViewer>
+        <StackPanel Spacing="8"
+                    VerticalAlignment="Top"
+                    Margin="32">
         
-        <ComboBox Name="NumberSystemComboBox1" Grid.Row="0" HorizontalAlignment="Stretch"></ComboBox>
-        <TextBox Name="InputBox" Grid.Row="1" TextInputOptions.ContentType="Digits"></TextBox>
+            <ComboBox Name="NumberSystemComboBox1" HorizontalAlignment="Stretch"></ComboBox>
+            <TextBox Name="InputBox" TextInputOptions.ContentType="Digits"></TextBox>
         
-        <Separator Grid.Row="2"></Separator>
+            <Separator></Separator>
         
-        <ComboBox Name="NumberSystemComboBox2" Grid.Row="3" HorizontalAlignment="Stretch"></ComboBox>
-        <TextBox Name="OutputBox" Grid.Row="4" IsReadOnly="True"></TextBox>
+            <ComboBox Name="NumberSystemComboBox2" HorizontalAlignment="Stretch"></ComboBox>
+            <TextBox Name="OutputBox" IsReadOnly="True"></TextBox>
         
-        <TextBlock Grid.Row="5" Text="Použitá metoda: Postupné Odečítání" HorizontalAlignment="Center" Margin="16" FontSize="12"></TextBlock>
+            <TextBlock Text="Použitá metoda: Postupné Odečítání" HorizontalAlignment="Center" Margin="16" FontSize="12"></TextBlock>
         
-        <TextBlock Name="LokaceText" Grid.Row="6" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
-        <TextBlock Name="StepsText" Grid.Row="7" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
-    </Grid>
+            <TextBlock Name="LokaceText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+            <TextBlock Name="StepsText" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+        </StackPanel>
+    </ScrollViewer>
 
 </UserControl>
