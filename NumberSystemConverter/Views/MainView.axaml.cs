@@ -54,35 +54,47 @@ public partial class MainView : UserControl
         if (NumberSystemComboBox1.SelectedItem == NumberSystemComboBox2.SelectedItem || string.IsNullOrEmpty(InputBox.Text))
         {
             OutputBox.Text = InputBox.Text;
+            LokaceText.Text = "";
+            StepsText.Text = "";
             return;
         }
 
         if (!int.TryParse(InputBox.Text, out int inputNumber))
+        {
+            LokaceText.Text = "";
+            StepsText.Text = "";
             return;
+        }
 
         int f10 = inputNumber;
         int z = _numberSystems[(string)NumberSystemComboBox2.SelectedItem];
         
         FindPowerAndExponent(z, f10, out var exponent);
 
-        CalculateResultWithSubtraction(exponent, z, f10, out var result);
+        CalculateResultWithSubtraction(exponent, z, f10, out var result, out var steps);
 
         OutputBox.Text = result;
+        LokaceText.Text = $"1. Lokace: {z}^{exponent} < {f10} < {z}^{exponent + 1}";
+        StepsText.Text = "2. Odečítání:\n" + steps;
     }
 
-    private void CalculateResultWithSubtraction(int exponent, int z, int f10, out string result)
+    private void CalculateResultWithSubtraction(int exponent, int z, int f10, out string result, out string steps)
     {
-        result = "";
+        result = ""; 
+        steps = "";
 
         while (exponent >= 0)
         {
             int power = (int)MathF.Pow(z, exponent);
 
             int count = f10 / power;
+            steps += $"{f10} - {count}×{power} = ";
             f10 %= power;
+            steps += $"{f10}   A{exponent} = {count}\n";
             
             result += _digits[count];
 
+            
             exponent--;
         }
     }

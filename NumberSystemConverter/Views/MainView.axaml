@@ -8,7 +8,7 @@
              x:DataType="vm:MainViewModel"
              FontSize="18">
     
-    <Grid RowDefinitions="Auto, Auto, *, Auto, Auto, Auto"
+    <Grid RowDefinitions="Auto, Auto, *, Auto, Auto, Auto, Auto, Auto"
           RowSpacing="8"
           VerticalAlignment="Top"
           Margin="32">
@@ -22,6 +22,9 @@
         <TextBox Name="OutputBox" Grid.Row="4" IsReadOnly="True"></TextBox>
         
         <TextBlock Grid.Row="5" Text="Použitá metoda: Postupné Odečítání" HorizontalAlignment="Center" Margin="16" FontSize="12"></TextBlock>
+        
+        <TextBlock Name="LokaceText" Grid.Row="6" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
+        <TextBlock Name="StepsText" Grid.Row="7" HorizontalAlignment="Left" Margin="16" FontSize="12"></TextBlock>
     </Grid>
 
 </UserControl>
